@@ -1,5 +1,4 @@
-import { vi } from "vitest";
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import { Stack } from "../src";
 
 describe("stack test", () => {
