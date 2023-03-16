@@ -1,0 +1,15 @@
+{
+  "name": "@datastru/stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
