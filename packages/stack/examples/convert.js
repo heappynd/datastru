@@ -1,5 +1,6 @@
 import { Stack } from "../src";
 
+// 辗转相除法
 export default function convert(decNumber, base = 2) {
   const remStack = new Stack();
   let number = decNumber;
