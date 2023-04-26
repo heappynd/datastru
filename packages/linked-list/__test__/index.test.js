@@ -10,11 +10,14 @@ describe('test linked list', () => {
     list.push(3)
     list.push(4)
 
-    // console.log(JSON.stringify(list))
+    expect(list.toString()).toBe('1 2 3 4')
 
     list.removeAt(2)
-    console.log(JSON.stringify(list))
+    expect(list.toString()).toBe('1 2 4')
 
-    console.log(list.getNodeAt(2));
+    expect(list.getNodeAt(2)).toEqual({ element: 4, next: null })
+
+    list.insert(5, 0)
+    expect(list.toString()).toBe('5 1 2 4')
   })
 })

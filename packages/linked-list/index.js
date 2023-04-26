@@ -93,9 +93,25 @@ export class LinkedList {
       }
       return node
     }
-    return
+    return undefined
   }
 
   // TODO: insert
-  insert() {}
+  insert(element, index) {
+    const previous = this.getNodeAt(index - 1)
+    const next = previous.next
+    const node = new Node(element)
+    previous.next = node
+    node.next = next
+  }
+
+  toString() {
+    let current = this.head
+    let str = ''
+    while (current !== null) {
+      str += current.element + ' '
+      current = current.next
+    }
+    return str.trim()
+  }
 }
