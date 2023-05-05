@@ -96,13 +96,35 @@ export class LinkedList {
     return undefined
   }
 
-  // TODO: insert
   insert(element, index) {
-    const previous = this.getNodeAt(index - 1)
-    const next = previous.next
-    const node = new Node(element)
-    previous.next = node
-    node.next = next
+    if (index >=0 && index <= this.count) {
+      const node = new Node(element)
+      if (index === 0) {
+        const current = this.head
+        node.next = current
+        this.head = node
+      } else {
+        const previous = this.getNodeAt(index - 1)
+        const current = previous.next
+        node.next = current
+        previous.next = node
+      }
+      this.count++
+      return true
+    }
+    return false
+  }
+
+  isEmpty() { 
+    return this.count === 0
+  }
+
+  size() {
+    return this.count
+  }
+
+  getHead() {
+    return this.head
   }
 
   toString() {
